@@ -13,7 +13,7 @@ def build_heap(data):
 
     if l < n and data[l] < data[j]:
         j = l
-    if r < n and data[r] < data[r]:
+    if r < n and data[r] < data[j]:
         j = r
 
     if j!= i:
