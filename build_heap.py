@@ -5,30 +5,30 @@ def build_heap(data):
     swaps = []
     n = len(data)
 
-    for i in range((n//2)-1)
+    for i in range((n//2)-1):
         j=i 
         while True:
             l = 2 * j + 1
             r = 2 * j + 2
 
-    if l < n and data[l] < data[j]:
-        j = l
-    if r < n and data[r] < data[j]:
-        j = r
+            if l < n and data[l] < data[j]:
+                j = l
+            if r < n and data[r] < data[j]:
+                j = r
 
-    if j!= i:
-        data[i], data[j] = data[j], data[i]
-        swaps.append((i,j))
-        else : break
+            if j!= i:
+                data[i], data[j] = data[j], data[i]
+                swaps.append((i,j))
+            else: break
 
     if len(swaps) > 4*len(data):
         raise Exception("error")
- 
+        
     return swaps
 
 def main():
     text = input("Enter I or F: ")
-    if "F" int text:
+    if "F" in text:
         filename = input("Enter the name of file: ")
         path = './tests/'
         file = path + filename
