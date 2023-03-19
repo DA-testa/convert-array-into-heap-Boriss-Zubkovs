@@ -5,7 +5,7 @@ def build_heap(data):
     swaps = []
     n = len(data)
 
-    for i in range((n//2)-1):
+    for i in range((n//2)-1,-1,-1):
         j=i 
         while True:
             l = 2 * j + 1
@@ -19,6 +19,7 @@ def build_heap(data):
             if j!= i:
                 data[i], data[j] = data[j], data[i]
                 swaps.append((i,j))
+                j=i
             else: break
 
     if len(swaps) > 4*len(data):
